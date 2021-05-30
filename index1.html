@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Airlinesa</title>
+</head>
+
+<body bgcolor='black' text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+Airlines
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Enter the details to check whether death event took place ot not!</h2>
+<h4>
+<form action="{{url_for('predict')}}" method="post">
+    <p> Gender : <input type='text' name='Gender' placeholder='Enter 0 for female 1 for male' required='required' />
+    &nbsp;&nbsp;&nbsp;&nbsp;Customer Type : <input type='text' name='Customer Type' placeholder='Enter 0 for no 1 for yes' required='required'/></p>
+    <p> Age : <input type='text' name='Age' placeholder='mcg/L' required='required' /></p>
+    <p> Type of Travel : <input type='text' name='Type of Travel' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p>Class : <input type='text' name='Class' placeholder='percentage' required='required' /></p>
+    <p> Flight Distance : <input type='text' name='Flight Distance' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Inflight wifi service : <input type='text' name='Inflight wifi service' placeholder='kiloplatelets/mL' required='required' /></p>
+    <p> Departure/Arrival time convenient : <input type='text' name='Serum creatinine' placeholder='mg/dL' required='required' /></p>
+    <p> Ease of Online booking : <input type='text' name='Ease of Online booking' placeholder='mEq/L' required='required' /></p>
+    <p> Gate location : <input type='text' name='Gate location' placeholder='Enter 0 for female 1 for male' required='required' />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smoking : <input type='text' name='Smoking' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Online boarding : <input type='text' name='Online boarding' placeholder ='Follow-up period (days)' required='required' /></p>
+    <p> Seat comfort: <input type='text' name='Seat comfort' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Inflight entertainmen: <input type='text' name='Inflight entertainmen' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> On-board service : <input type='text' name='On-board service' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Leg room service : <input type='text' name='Leg room service' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Baggage handling : <input type='text' name='Baggage handling' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Checkin service : <input type='text' name='Checkin service' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Inflight service : <input type='text' name='Inflight service' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Cleanliness: <input type='text' name='Cleanliness' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Departure Delay in Minutes : <input type='text' name='Departure Delay in Minutes' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Arrival Delay in Minutes	: <input type='text' name='Arrival Delay in Minutes	' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+    <p> Flight Distance : <input type='text' name='Flight Distance' placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
