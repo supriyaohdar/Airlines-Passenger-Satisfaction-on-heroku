@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Airlines Passenger Satisfaction</title>
+</head>
+
+<body bgcolor='green' text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+Airlines Passenger Satisfaction
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:yellow">
+<hr>
+<hr></div>
+<h2> Enter the details here:</h2>
+<h4>
+
+
+<form action="{{url_for('predict')}}" method="post">
+    <p> Gender : <input type='text' name='Gender' placeholder='F-0;M-1' required='required' /></p>
+    <p>Customer Type : <input type='text' name='Customer Type' placeholder='Loyal-0; Disloyal-1' required='required'/></p>
+    &nbsp&nbsp;<p> Age : <input type='text' name='Age' placeholder='Enter age in years' required='required' /></p>
+    <p> Type of Travel : <input type='text' name='Type of Travel' placeholder='Personal-0; Business-1' required='required' /></p>
+    <p>Class : <input type='text' name='Class' placeholder='Eco-0; Business-1;eco Plus-2' required='required' /></p>
+    <p> Flight Distance : <input type='text' name='Flight Distance' placeholder='Enter flight distance in KM' required='required' /></p>
+    <p> Inflight wifi service : <input type='text' name='Inflight wifi service' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Departure/Arrival time convenient : <input type='text' name='Departure/Arrival time convenient' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Ease of Online booking : <input type='text' name='Ease of Online booking' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Gate location : <input type='text' name='Gate location' placeholder='Enter from 0-5' required='required' /></p>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>Food and Drink : <input type='text' name='Food and Drink' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Online boarding : <input type='text' name='Online boarding' placeholder ='Enter from 0-5' required='required' /></p>
+    <p> Seat comfort: <input type='text' name='Seat comfort' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Inflight entertainmen: <input type='text' name='Inflight entertainmen' placeholder='Enter from 0-5' required='required' /></p>
+    <p> On-board service : <input type='text' name='On-board service' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Leg room service : <input type='text' name='Leg room service' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Baggage handling : <input type='text' name='Baggage handling' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Checkin service : <input type='text' name='Checkin service' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Inflight service : <input type='text' name='Inflight service' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Cleanliness: <input type='text' name='Cleanliness' placeholder='Enter from 0-5' required='required' /></p>
+    <p> Departure Delay in Minutes : <input type='text' name='Departure Delay in Minutes' placeholder='Enter the number in minutes' required='required' /></p>
+    <p> Arrival Delay in Minutes	: <input type='text' name='Arrival Delay in Minutes	' placeholder='Enter the number in minutes' required='required' /></p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
